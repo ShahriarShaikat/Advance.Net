@@ -1,0 +1,24 @@
+﻿@model List<dbPractice.Models.Database.student>
+@{
+    ViewBag.Title = "showList";
+}
+
+<h2>Student list</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>Name</th>
+        <th>Id</th>
+        <th>CGPA</th>
+        <th>Age</th>
+    </tr>
+    @foreach (var obj in Model)
+    {
+        <tr>
+            <td>@obj.name</td>
+            <td>@obj.id</td>
+            <td>@obj.cgpa</td>
+            <td>@obj.age</td>
+        </tr>
+    }
+</table>
+
