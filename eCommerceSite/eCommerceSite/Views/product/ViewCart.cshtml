@@ -1,0 +1,33 @@
+﻿@model List<eCommerceSite.Models.Database.product>
+@{
+    ViewBag.Title = "ViewCart";
+}
+
+<h2>View Cart</h2>
+
+
+<h2>Cart Page</h2>
+
+
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Action</th>
+    </tr>
+
+
+    @foreach (var obj in Model)
+    {
+        <tr>
+            <td>@obj.id</td>
+            <td>@obj.name</td>
+            <td>@obj.price</td>
+            <td>@obj.qty</td>
+            <td><a class="btn btn-danger" href="/product/DeleteProduct/@obj.id">Delete</a></td>
+        </tr>
+    }
+
+</table>
