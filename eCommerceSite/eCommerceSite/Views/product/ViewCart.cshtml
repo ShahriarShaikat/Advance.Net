@@ -3,12 +3,16 @@
     ViewBag.Title = "ViewCart";
 }
 
-<h2>View Cart</h2>
+
 
 
 <h2>Cart Page</h2>
-
-
+@if (TempData["msg"] != null) { @TempData["msg"]; }
+@if (Session["msg"] != null) 
+{ 
+    <h1 style="color:green;">@Session["msg"]</h1>  
+    Session["msg"] = null;
+}
 <table class="table table-bordered">
     <tr>
         <th>Id</th>
